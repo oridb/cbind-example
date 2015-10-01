@@ -1,0 +1,16 @@
+bin foo =
+	main.myr
+
+	# Our binding code. The .myr file contains the
+	# interface that we expose to the rest of the code.
+	# it can be named anything we like, but for clarity
+	# it's best to keep the name in sync with the .glue.c
+	# file.
+	#
+	# The <libname>.glue.c file must have the same name
+	# as the library we're trying to link in. It instructs
+	# mbld to add the appropriate flags to link in
+	# lib<libname>.so.
+	c.myr
+	c.glue.c
+;;

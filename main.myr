@@ -1,0 +1,16 @@
+use std
+use "c.use"
+
+const main = {
+	var h
+
+	/* 
+	C wants a '\0' on the end of a string. Myrddin
+	does not guarantee this, so put it in explicitly.
+	*/
+	h = "hello world from C\n\0"
+
+	/* we need some casting to get pointers from slices. */
+	c.write(1, h[:h.len-2] castto(byte#), h.len)
+	c.puts(h castto(byte#))
+}
