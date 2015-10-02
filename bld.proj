@@ -1,6 +1,10 @@
 bin foo =
 	main.myr
 
+	lib libc
+;;
+
+lib libc =
 	# Our binding code. The .myr file contains the
 	# interface that we expose to the rest of the code.
 	# it can be named anything we like, but for clarity
@@ -11,6 +15,6 @@ bin foo =
 	# as the library we're trying to link in. It instructs
 	# mbld to add the appropriate flags to link in
 	# lib<libname>.so.
-	c.myr
-	c.glue.c
+	libc.myr
+	libc.glue.c
 ;;

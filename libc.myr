@@ -1,7 +1,7 @@
 use std
 
 /* the package name is arbitrary -- it just has to match up with libname.glue.c */
-pkg c =
+pkg libc =
 	/*
 	the functions we're binding. Again, we're free to pick whatever name
 	we want for them, as long as it matches up with the name we picked in
