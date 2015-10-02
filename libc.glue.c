@@ -10,7 +10,7 @@
 #include <stdio.h>
 
 /* 
- * We're putting this code into namespace 'c'.
+ * We're putting this code into package 'libc'.
  *
  * Myrddin's namespacing uses a '$' to separate
  * the package from the function name, so we
