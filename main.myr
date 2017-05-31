@@ -11,6 +11,6 @@ const main = {
 	h = "hello world from C\n\0"
 
 	/* we need some casting to get pointers from slices. */
-	libc.write(1, h[:h.len-2] castto(byte#), h.len)
-	libc.puts(h castto(byte#))
+	libc.write(1, (h[:h.len-2] : byte#), h.len)
+	libc.puts((h : byte#))
 }
